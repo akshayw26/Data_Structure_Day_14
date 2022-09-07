@@ -18,6 +18,13 @@ public class LinkedListMain {
         System.out.println(linkedList2.popLast());
         linkedList2.print();
 
+        if(linkedList2.search(30) != null){
+            System.out.println("Element found");
+        }
+        else {
+            System.out.println("Element not found");
+        }
+
     }
 
 }
