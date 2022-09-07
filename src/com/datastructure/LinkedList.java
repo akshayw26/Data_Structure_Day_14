@@ -1,6 +1,7 @@
 package com.datastructure;
 
 public class LinkedList<E> {
+
     Node<E> head;
     Node<E> tail;
 
