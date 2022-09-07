@@ -35,5 +35,15 @@ public class LinkedList<E> {
         }
         System.out.println();
     }
+    public void insert(E key) {
+        Node<E> newNode = new Node<>(key);
+        newNode.setNext(tail);
+        head.setNext(newNode);
+    }
+    public E pop(){
+        E popData = head.getKey();
+        head = head.getNext();
+        return popData;
+    }
 
 }
