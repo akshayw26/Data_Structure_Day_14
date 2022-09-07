@@ -7,11 +7,10 @@ public class LinkedList<E> {
 
     public void push(E key) {
         Node<E> newNode = new Node<>(key);
-        if(head == null) {
+        if (head == null) {
             head = newNode;
             tail = newNode;
-        }
-        else{
+        } else {
             newNode.setNext(head);
             head = newNode;
         }
@@ -27,23 +26,39 @@ public class LinkedList<E> {
         tail = newNode;
     }
 
-    void print(){
+    void print() {
         Node<E> temp = head;
-        while(temp!=null){
+        while (temp != null) {
             System.out.print(temp.getKey() + " ");
             temp = temp.getNext();
         }
         System.out.println();
     }
+
     public void insert(E key) {
         Node<E> newNode = new Node<>(key);
         newNode.setNext(tail);
         head.setNext(newNode);
     }
-    public E pop(){
+
+    public E pop() {
         E popData = head.getKey();
         head = head.getNext();
         return popData;
     }
 
+    public E popLast() {
+        E popData = tail.getKey();
+        Node<E> temp = head;
+        if (head == tail) {
+            head = null;
+        }
+        while (temp.getNext() != tail) {
+            temp = temp.getNext();
+        }
+        temp.setNext(null);
+        tail = temp;
+        return popData;
+
+    }
 }
