@@ -29,6 +29,12 @@ public class LinkedListMain {
         System.out.println();
         linkedList2.print();
 
+        System.out.println();
+        linkedList2.popNode(40);
+        linkedList2.print();
+        System.out.println();
+
+        System.out.println("Size of Array is : " + linkedList2.size());
     }
 
 }
